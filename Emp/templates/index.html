@@ -1,0 +1,20 @@
+{% extends 'master.html' %}
+
+{% block content %}
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Emp ID</th>
+          <th scope="col">Emp Name</th>
+        </tr>
+      </thead>
+      {% for emp in data %}
+      <tbody>
+        <tr>
+          <td>{{emp.empno}}</td>
+          <td>{{emp.empname}}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+{% endblock %}
